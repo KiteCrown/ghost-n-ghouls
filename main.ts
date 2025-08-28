@@ -488,7 +488,7 @@ profilelife.setName("knight")
 profilelife.setMaxLife(7)
 profilelife.setTextColor(1)
 face = 0
-tiles.setCurrentTilemap(tilemap`level3`)
+tiles.setCurrentTilemap(tilemap`level1`)
 scene.setBackgroundImage(img`
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
@@ -632,7 +632,7 @@ mySprite = sprites.create(img`
 scene.cameraFollowSprite(mySprite)
 controller.moveSprite(mySprite, 50, 0)
 mySprite.ay = 500
-for (let value of tiles.getTilesByType(assets.tile`myTile0`)) {
+for (let value of tiles.getTilesByType(assets.tile`transparency16`)) {
     zombie = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -653,7 +653,7 @@ for (let value of tiles.getTilesByType(assets.tile`myTile0`)) {
         `, SpriteKind.zombie)
     tiles.placeOnTile(zombie, value)
     zombie.ay = 500
-    tiles.setTileAt(value, assets.tile`transparency8`)
+    tiles.setTileAt(value, assets.tile`transparency16`)
     zombie.vx = 20
     animation.runImageAnimation(
     zombie,
